@@ -23,14 +23,14 @@ namespace iphoneWorld.iphoneWorld
 
         }
 
-        public void PrepareTestRecord(Irecordable record)
+        public void PrepareTestRecord(Irecordable record)//this should happen in injection
         {
             _testRecord = record;
         }
 
-        public void PrepareDpTable(IalgoGeneratable DPAlgoG)
+        public void PrepareDpTable(IalgoGeneratable DPAlgoG)//you're essentially injecting the table, but you're actually injection the algo?  LOD
         {
-            _DPTable = DPAlgoG.generateDPTable();
+            _DPTable = DPAlgoG.generateDPTable(); 
         }
 
         public void GoToBuilding(Ibuilding building)
@@ -40,7 +40,7 @@ namespace iphoneWorld.iphoneWorld
         }
 
 
-        public void PickUpPhones(IgroupOfTestable Phones)
+        public void PickUpPhones(IgroupOfTestable Phones)//this should happen in injection
         {
             Phones.carriedBy(this);
             _IphonesBeingTested = Phones;
